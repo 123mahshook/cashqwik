@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "929599430488",
+    "project_id": "zbee-3db5b",
+    "storage_bucket": "zbee-3db5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929599430488:android:0fe62314076bf1da318f2d",
+        "android_client_info": {
+          "package_name": "com.zbee.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929599430488-2tlsb35h1b8r0la1dsrk2vrk0rgo0493.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo1KVpF2R-aH-HowqiRtx9KMHWmiKHfd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929599430488-2tlsb35h1b8r0la1dsrk2vrk0rgo0493.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
