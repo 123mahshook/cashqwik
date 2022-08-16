@@ -45,10 +45,10 @@ dependencies:
     path: packages/cookee_sqlite
   cookee_common:
     git:
-      url: https://github.com/ajmalvk/flutter_package_cookee_common
+      url: https://github.com/123mahshook/flutter_package_cookee_common
   cookee_prefs:
     git:
-      url: https://github.com/ajmalvk/flutter_package_cookee_prefs
+      url: https://github.com/123mahshook/flutter_package_cookee_prefs
   cupertino_icons: ^1.0.2
   custom_info_window: ^1.0.1
   dio: ^4.0.6

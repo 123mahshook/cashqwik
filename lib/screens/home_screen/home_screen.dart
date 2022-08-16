@@ -100,12 +100,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       height: SizeUtils.getScreenHeight(),
       width: SizeUtils.getScreenWidth(),
       //color: AppColors.gradiantTwoColor,
-      decoration: BoxDecoration(
+      /*decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [AppColors.gradientOneColor, AppColors.gradiantTwoColor],
               begin: Alignment.topCenter,
-              end: Alignment.bottomCenter)),
-      padding: EdgeInsets.only(top: SizeUtils.getHeight(8)),
+              end: Alignment.bottomCenter)),*/
+      // padding: EdgeInsets.only(top: SizeUtils.getHeight(8)),
       child: ScrollConfiguration(
           behavior: NoGlowScrollBehaviour(),
           child: RefreshIndicator(
@@ -120,9 +120,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         minHeight: SizeUtils.getHeight(60),
                         maxHeight: SizeUtils.getHeight(60),
                         child: DecoratedBox(
-                            decoration: BoxDecoration(
-                                color: AppColors.gradiantTwoColor
-                                    .withOpacity(0.08)),
+                            decoration: const BoxDecoration(
+                                // color: AppColors.gradiantTwoColor
+                                ),
                             child: appBar()))),
                 /*SliverPersistentHeader(
                     pinned: true,
@@ -150,25 +150,37 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                             )))),*/
                 SliverList(
                     delegate: SliverChildListDelegate([
-                  verticalSpace(24),
-                  Stack(
-                    children: [
-                      // categoryListView(),
-                      HomeBgView(
-                        key: _bgViewKey,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: SizeUtils.getHeight(110)),
-                        child: subCategoryListView(),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: SizeUtils.getHeight(248)),
-                        child: Container(
-                          color: AppColors.white.withOpacity(0.7),
-                          child: recentMembers(),
+                  Container(
+                    decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                          AppColors.gradientOneColor,
+                          AppColors.gradiantTwoColor
+                        ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter)),
+                    child: Stack(
+                      children: [
+                        verticalSpace(24),
+                        // categoryListView(),
+                        HomeBgView(
+                          key: _bgViewKey,
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding:
+                              EdgeInsets.only(top: SizeUtils.getHeight(110)),
+                          child: subCategoryListView(),
+                        ),
+                        Padding(
+                          padding:
+                              EdgeInsets.only(top: SizeUtils.getHeight(248)),
+                          child: Container(
+                            color: AppColors.white.withOpacity(0.7),
+                            child: recentMembers(),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Container(
                     color: AppColors.white.withOpacity(0.7),
@@ -191,6 +203,14 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Widget appBar() {
     return Container(
       decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            AppColors.gradientOneColor,
+            AppColors.gradientOneColor.withOpacity(0.96),
+            AppColors.gradientOneColor.withOpacity(0.95),
+            AppColors.gradientOneColor.withOpacity(0.93),
+            AppColors.gradientOneColor.withOpacity(0.89),
+            AppColors.gradientOneColor.withOpacity(0.8),
+          ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
           borderRadius: BorderRadius.only(
               topRight: Radius.circular(SizeUtils.getRadius(5)),
               bottomRight: Radius.circular(SizeUtils.getRadius(5)),
@@ -199,7 +219,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       height: SizeUtils.getHeight(50),
       width: SizeUtils.getScreenWidth(),
       padding: EdgeInsets.only(
-          left: SizeUtils.getWidth(24), right: SizeUtils.getWidth(24)),
+          left: SizeUtils.getWidth(24),
+          right: SizeUtils.getWidth(24),
+          top: SizeUtils.getHeight(8)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

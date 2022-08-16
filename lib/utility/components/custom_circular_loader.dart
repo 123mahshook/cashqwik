@@ -48,7 +48,7 @@ class _CustomCircularLoaderState extends State<CustomCircularLoader>
   @override
   Widget build(BuildContext context) {
     return LoadingAnimationWidget.fourRotatingDots(
-            color: AppColors.primaryColor, size: SizeUtils.getHeight(32))
+            color: AppColors.gradiantTwoColor, size: SizeUtils.getHeight(32))
         /* RotationTransition(
       turns: _animation,
       child: SizedBox(

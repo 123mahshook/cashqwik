@@ -146,8 +146,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "440568c2f91c8c6cf309c85ba7716835d737ff74"
-      url: "https://github.com/ajmalvk/flutter_package_cookee_common"
+      resolved-ref: a6456a82f9cb75bae4c4b06eb3acaeb9f558a393
+      url: "https://github.com/123mahshook/flutter_package_cookee_common"
     source: git
     version: "0.0.3"
   cookee_prefs:
@@ -155,8 +155,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: d72287801695e75d5b5c3a1255d17ca1a901eac9
-      url: "https://github.com/ajmalvk/flutter_package_cookee_prefs"
+      resolved-ref: "928d92da78e0cce84408ee380f512891bbb1d0e3"
+      url: "https://github.com/123mahshook/flutter_package_cookee_prefs"
     source: git
     version: "0.0.2"
   cookee_sqlite:

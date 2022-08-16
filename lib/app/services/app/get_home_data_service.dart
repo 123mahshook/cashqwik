@@ -6,16 +6,17 @@ import 'package:cookee_common/Services/convert_service.dart';
 import 'package:http/http.dart' as http;
 
 class GetHomeDataService extends BaseService {
-  Future<Map<String, dynamic>> get(String pageNumber) async {
+  Future<List<dynamic>> get(String pageNumber) async {
     Map<String, dynamic> res = <String, dynamic>{};
-
     try {
       var response = await http.get(Uri.parse(fetchUserUrl + pageNumber));
 
       Map<String, dynamic> data = jsonDecode(response.body);
       _setData(data, pageNumber);
-    } catch (_) {}
-    return res;
+      return data['data'];
+    } catch (_) {
+      return [];
+    }
   }
 
   _setData(Map<String, dynamic> res, String pageNumber) {

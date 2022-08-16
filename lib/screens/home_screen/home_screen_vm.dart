@@ -58,13 +58,17 @@ class HomeScreenVM extends BaseViewModel {
 
   _paginateApiCall() async {
     if (resultData.length < appModel!.total) {
+      //pageCount--;
       _loaderSink.add(true);
       // pageCount++;
 
-      await GetHomeDataService().get(ConvertService.convertString(pageCount));
-      for (var element in appModel!.customerData) {
+      List<dynamic> res = await GetHomeDataService()
+          .get(ConvertService.convertString(pageCount));
+      //for (var element in appModel!.customerData) {
+      for (var element in res) {
         resultData.add(element);
       }
+      resultData = resultData.reversed.toList();
       _loaderSink.add(false);
       List<Map<String, dynamic>> currentData =
           resultData.skip((pageCount - 1) * itemCount).take(itemCount).toList();
